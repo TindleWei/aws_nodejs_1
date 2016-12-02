@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Tip</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<header>
+<h1><%= title %></h1>
+</header>
+
+<nav>
+<span><a title="首页" href="/tips">home</a></span>
+<span><a title="标签" href="/tips/tags">tags</a></span>
+<span><a title="存档" href="/tips/archive">archive</a></span>
+<% if (user) { %>
+  <span><a title="发表" href="/tips/new">New</a></span>
+<% } else { %>
+  <span><a title="登录" href="/tips/login">login</a></span>
+<% } %>
+<span><form action="/tips/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form></span>
+</nav>
+
+<article>
+
+<% if (success) { %>
+  <div><%= success %></div>
+<% } %>
+<% if (error) { %>
+  <div><%= error %> </div>
+<% } %>

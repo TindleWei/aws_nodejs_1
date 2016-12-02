@@ -1,0 +1,17 @@
+<%- include tips_header %>
+<% tips.forEach(function (tip, index) { %>
+	<p><h2><a href="/tips/single/<%= tip._id%>"><%= tip.title %></a></h2>
+	<p class="info"> 
+		日期: <%= tip.time.minute %> |
+		标签：
+		<% tip.tags.forEach(function (tag, index) { %>
+			<% if (tag) { %>
+				<a class="tag" href="/tips/tags/<%= tag%>"><%= tag %></a> 
+			<% } %>
+		<% }) %>
+	</p>
+	<p><%- tip.content %></p>
+<% }) %>
+
+<%- include tips_paging %>
+<%- include tips_footer %>

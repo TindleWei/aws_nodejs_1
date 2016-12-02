@@ -1,0 +1,12 @@
+<%- include tips_header %>
+<ul class="archive">
+<% var lastYear = 0 %>
+<% tips.forEach(function (tip, index) { %>
+	<% if (lastYear != tip.time.year) { %>
+		<li><h3><%= tip.time.year %></h3></li>
+	<% lastYear = tip.time.year } %>
+	<li><time><%= tip.time.day %></time></li>
+	<li><a href="/tips/single/<%= tip._id %>"><%= tip.title %></a></li>
+<% }) %>
+</ul>
+<%- include tips_footer %>

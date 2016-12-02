@@ -1,0 +1,13 @@
+<%- include tips_header %>
+<form method="post" action="/tips/edit/<%= tip._id %>">
+  标题：<br />
+  <input type="text" name="title" value="<%= tip.title %>"/><br />
+  标签：<br />
+  <input type="text" name="tag1" value="<%= tip.tags[0] %>"/>
+  <input type="text" name="tag2" value="<%= tip.tags[1] %>"/>
+  <input type="text" name="tag3" value="<%= tip.tags[2] %>"/><br />
+  正文：<br />
+  <textarea name="content" rows="20" cols="100"><%= tip.content %></textarea><br />
+  <input type="submit" value="保存修改" />
+</form>
+<%- include tips_footer %>

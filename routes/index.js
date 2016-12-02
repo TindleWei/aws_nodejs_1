@@ -21,6 +21,8 @@ var upload = multer({
 
 module.exports = function(app) {
 
+    app.use('/tips', require('./tips'));
+
     app.get('/home', function(req, res) {
         res.render('home',{});
     });
