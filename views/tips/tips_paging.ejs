@@ -1,10 +1,16 @@
 <br />
-<div>
-  <% if(!isFirstPage) { %>
-  	<span class="prepage"><a title="上一页" href="?p=<%= page-1 %>">上一页</a></span>
-  <% } %>
-
-  <% if (!isLastPage) { %>
-  	<span class="nextpage"><a title="" href="?p=<%= page+1 %>">下一页</a></span>
-  <% } %>
+<div class=" col-12 pagination">
+	<ul class="pagination-list">
+  		<% if(!isFirstPage) { %>
+  			<li class="prepage"><a title="上一页" href="?p=<%= page-1 %>">上一页</a></li>
+  		<% } %>
+  		<li class="numpage"><a href="#">1</a></li>
+		<li class="numpage"><a href="#">2</a></li>
+		<li class="numpage"><a href="#">3</a></li>
+		<li class="numpage"><a href="#">4</a></li>
+		<li class="numpage"><a href="#">5</a></li>
+  		<% if (!isLastPage) { %>
+  			<li class="nextpage"><a title="" href="?p=<%= page+1 %>">下一页</a></li>
+  		<% } %>
+  	</ul>
 </div>

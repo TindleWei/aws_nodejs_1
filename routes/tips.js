@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
             tips = [];
         }
         res.render('./tips/tips_index', {
-            title: 'Main Page',
+            title: 'Tips',
             tips: tips,
             page: page,
             isFirstPage: (page - 1) == 0,

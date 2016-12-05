@@ -1,17 +1,23 @@
 <%- include tips_header %>
+
 <% tips.forEach(function (tip, index) { %>
-	<p><h2><a href="/tips/single/<%= tip._id%>"><%= tip.title %></a></h2>
+<div class="col-4 note_paper">
+	<h2><a href="/tips/single/<%= tip._id%>"><%= tip.title %></a></h2>
 	<p class="info"> 
-		日期: <%= tip.time.minute %> |
-		标签：
+		
 		<% tip.tags.forEach(function (tag, index) { %>
 			<% if (tag) { %>
-				<a class="tag" href="/tips/tags/<%= tag%>"><%= tag %></a> 
+				<a class="tag" href="/tips/tags/<%= tag%>">#<%= tag %></a> 
 			<% } %>
 		<% }) %>
 	</p>
-	<p><%- tip.content %></p>
+	<div>
+	<div class="paper_content"><%- tip.content %></div>
+	</div>
+	<div class="bottom_time"> <p><%= tip.time.day %></p></div> 
+</div>
 <% }) %>
+
 
 <%- include tips_paging %>
 <%- include tips_footer %>

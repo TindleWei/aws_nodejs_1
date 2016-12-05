@@ -3,26 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <title>简单的响应式网页</title>
+    <title>其他断点</title>
 <style>
 *{
     box-sizing:border-box;
 }
+/* 所有列左浮动 */
+[class*="col-"]{
+    float:left;
+    padding:15px;
+}
+/* 清除浮动 */
+.row:after{
+    content:"";
+    display:block;
+    clear:both;
+}
 .header{
-    border:1px solid red;
+    background-color:#9933cc;
+    color:#ffffff;
     padding:15px;
 }
-.menu{
-    width:25%;
-    float:left;
-    padding:15px;
-    border:1px solid red;
+.menu ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
 }
-.main{
-    width:75%;
-    float:left;
+.menu li{
+    padding:8px;
+    margin-bottom:7px;
+    background-color:#33b5e5;
+    color:#ffffff;
+    box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover{
+    background-color:#0099cc;
+}
+.sidebar{
+    background-color:#33b5e5;
     padding:15px;
-    border:1px solid red;
+    color:#ffffff;
+    text-align:center;
+    font-size:14px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer{
+    background-color:#0099cc;
+    color:#ffffff;
+    text-align:center;
+    font-size:12px;
+    padding:15px;
+}
+
+/* 移动端优先: */
+[class*="col-"]{
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 768px){
+    /* 桌面： */
+    .col-1{width:8.33%;}
+    .col-2{width:16.66%;}
+    .col-3{width:25%;}
+    .col-4{width:33.33%;}
+    .col-5{width:41.66%;}
+    .col-6{width:50%;}
+    .col-7{width:58.33%;}
+    .col-8{width:66.66%;}
+    .col-9{width:75%;}
+    .col-10{width:83.33%;}
+    .col-11{width:91.66%;}
+    .col-12{width:100%;}
 }
 </style>
 </head>
@@ -30,18 +82,36 @@
 <div class="header">
     <h1>页头</h1>
 </div>
-<div class="menu">
-    <ul>
-        <li>菜单 1</li>
-        <li>菜单 2</li>
-        <li>菜单 3</li>
-        <li>菜单 4</li>
-    </ul>
+<div class="row">
+    <!-- <div class="col-3 menu"> -->
+    <div class="col-3 col-m-3 menu">
+        <ul>
+            <li>菜单 1</li>
+            <li>菜单 2</li>
+            <li>菜单 3</li>
+            <li>菜单 4</li>
+        </ul>
+    </div>
+    <!-- <div class="col-6"> -->
+    <div class="col-6 col-m-9">
+        <h2>内容</h2>
+        <p>响应式设计是指在不同分辨率的设备中，网页布局可以自适应的调整。这种弹性化的布局使网站在不同设备中的布局都比较合理，可以为不同终端的用户提供更加舒适的界面和更好的用户体验，其根本理念是使原本 PC 上的网站兼容手机和平板。</p>
+        <p>响应式网格视图通常是 12 列，宽度为 100%，在浏览器窗口大小调整时会自动伸缩。</p>
+    </div>
+    <!-- <div class="col-3 right"> -->
+    <div class="col-3 col-m-12 right">
+        <div class="sidebar">
+            <h2>Viewport</h2>
+            <p>viewport 翻译为中文为"视区/视窗/视口"，就是指用户网页的可视区域。</p>
+            <h2>CSS 栅格系统</h2>
+            <p>栅格系统也叫做网格视图，即通过固定的格子结构，来进行设计布局网页，响应式设计就是网格视图的实现方式。</p>
+            <h2>媒体查询</h2>
+            <p>使用 @media 查询，你可以针对不同的媒体类型定义不同的样式。</p>
+        </div>
+    </div>
 </div>
-<div class="main">
-    <h2>内容</h2>
-    <p>响应式设计是指在不同分辨率的设备中，网页布局可以自适应的调整。这种弹性化的布局使网站在不同设备中的布局都比较合理，可以为不同终端的用户提供更加舒适的界面和更好的用户体验，其根本理念是使原本 PC 上的网站兼容手机和平板。</p>
-    <p>响应式网格视图通常是 12 列，宽度为 100%，在浏览器窗口大小调整时会自动伸缩。</p>
+<div class="footer">
+    <p>页脚</p>
 </div>
 </body>
 </html>

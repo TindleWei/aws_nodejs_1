@@ -1,19 +1,26 @@
 <%- include tips_header %>
+<div class="col-12 tip_single">
+
+<h1><%= tip.title %> </h1>
+
 <p>
 
 	<span><a class="edit" href="/tips/edit/<%= tip._id %>">编辑</a></span>
 	<span><a class="edit" href="/tips/remove/<%= tip._id %>">删除</a></span>
 
 </p>
+
 <p class="info">
-  	日期：<%= tip.time.minute %>
-	  标签：
-  	<% tip.tags.forEach(function (tag, index) { %>
-    	<% if (tag) { %>
-      		<a class="tag" href="/tips/tags/<%= tag %>"><%= tag %></a>
-    	<% } %>
-  	<% }) %>
+  	Time: <%= tip.time.day %>
+  	<br/>
+		Tag: 
+  		<% tip.tags.forEach(function (tag, index) { %>
+    		<% if (tag) { %>
+      			<a class="tag" href="/tips/tags/<%= tag %>"><%= tag %></a>
+    		<% } %>
+  		<% }) %>
 </p>
 <p><%- tip.content %></p>
+</div>
 
 <%- include tips_footer %>
