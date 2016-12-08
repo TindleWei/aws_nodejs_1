@@ -313,6 +313,15 @@ body {
     padding: 0 10px 20px;
 }
 
+/*简书的css*/
+.main .rich-text, .main .markdown {
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+}
+
 /*body {
     width: 600px;
     margin: 2em auto;

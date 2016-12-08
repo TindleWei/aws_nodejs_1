@@ -4,41 +4,91 @@
     box-sizing: border-box;
 }
 
+
 /* 移动端优先: */
-[class*="col-"]{
+
+[class*="col-"] {
     width: 100%;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
     /* 平板 */
-    .col-m-1{width:8.33%;}
-    .col-m-2{width:16.66%;}
-    .col-m-3{width:25%;}
-    .col-m-4{width:33.33%;}
-    .col-m-5{width:41.66%;}
-    .col-m-6{width:50%;}
-    .col-m-7{width:58.33%;}
-    .col-m-8{width:66.66%;}
-    .col-m-9{width:75%;}
-    .col-m-10{width:83.33%;}
-    .col-m-11{width:91.66%;}
-    .col-m-12{width:100%;}
+    .col-m-1 {
+        width: 8.33%;
+    }
+    .col-m-2 {
+        width: 16.66%;
+    }
+    .col-m-3 {
+        width: 25%;
+    }
+    .col-m-4 {
+        width: 33.33%;
+    }
+    .col-m-5 {
+        width: 41.66%;
+    }
+    .col-m-6 {
+        width: 50%;
+    }
+    .col-m-7 {
+        width: 58.33%;
+    }
+    .col-m-8 {
+        width: 66.66%;
+    }
+    .col-m-9 {
+        width: 75%;
+    }
+    .col-m-10 {
+        width: 83.33%;
+    }
+    .col-m-11 {
+        width: 91.66%;
+    }
+    .col-m-12 {
+        width: 100%;
+    }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
     /* 桌面： */
-    .col-1{width:8.33%;}
-    .col-2{width:16.66%;}
-    .col-3{width:25%;}
-    .col-4{width:33.33%;}
-    .col-5{width:41.66%;}
-    .col-6{width:50%;}
-    .col-7{width:58.33%;}
-    .col-8{width:66.66%;}
-    .col-9{width:75%;}
-    .col-10{width:83.33%;}
-    .col-11{width:91.66%;}
-    .col-12{width:100%;}
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
 }
 
 body {
@@ -73,7 +123,7 @@ body {
 
 .portrait {
     float: left;
-    width: 175px;
+    width: auto;
     height: 175px;
     overflow: hidden;
     background-position: center center;
@@ -90,6 +140,7 @@ body {
     bottom: 10px;
     left: 200px;
     top: auto;
+    
 }
 
 .name span {
@@ -116,6 +167,11 @@ body {
     margin: 5px 0px;
     text-align: left;
     line-height: 125%;
+}
+
+.row {
+    height: auto;
+    float: left;
 }
 
 .row_container {
@@ -219,5 +275,5 @@ body {
     color: #f1f1f1;
     font-weight: 900;
     text-decoration: none;
-	padding: 0px 5px;
+    padding: 0px 5px;
 }
